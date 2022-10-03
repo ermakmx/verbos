@@ -1,0 +1,13 @@
+.containerCenter{
+    margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+#next{
+margin-top: 10rem;
+cursor: pointer;
+color: green;
+
+}
