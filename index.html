@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="./verbs.js"></script>
-   <!-- <script type="text/javascript" src="./script.js"></script> -->
-    <script type="text/javascript" src="./xcript.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-dark bg-dark text-light">
-      <div class="container-fluid">
-        <p class="col-9">verbs</p>
-        <p class="col-3">algo</p>
-      </div>
-    </nav>
-    <form id="respuesta" action="./xcript.js"></form>
-    <div class="container" style="padding-top: 100px;">
-       <div class="row justify-content-md-center align-items-center">
-        <div class="btn-group-vertical  gap-3 col col-lg-6" role="group" aria-label="Vertical radio toggle button group">
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-          <label class="btn btn-outline-danger" for="vbtn-radio1">Verbo 1</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-          <label class="btn btn-outline-danger" for="vbtn-radio2">Verbo 2</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-          <label class="btn btn-outline-danger" for="vbtn-radio3">Verbo 3</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off">
-          <label class="btn btn-outline-danger" for="vbtn-radio4">Verbo 4</label>
-        </div>
-       </div>
-    </div>
-     </form>
-    <div style="text-align: center; padding-top: 50px;"><p>texto</p><br>
-      <button type="button" class="btn btn-primary" onclick="cambiar()">Verify </button>
-    </div>
-    <div type="submit" style="text-align: center; padding-top: 20px"><p>Puntuacion:  5 </p></div>
-    <!-- <div  id="next">
-      <div class="containerCenter">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          fill="currentColor"
-          class="bi bi-caret-right-fill"
-          viewBox="0 0 16 16"
-          id="next"
-          style="display: block; margin: auto; "
-          
-          
-        >
-          <path
-            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-          />
-        </svg>
-      </div>
-      <div class="row" style="text-align: center;">
-        <h1>Play to start</h1>
-      <div class="containerCenter" id="showVerb" style="text-align: center">
-        <div id="verbs-container">
-            <div id="showImage">
-                <audio src="https://www.wordreference.com/audio/en/us/us/en050346.mp3" id="showAudio" controls autoplay></audio>
-                <p id="first-verb" class="verbs.answer"></p>
-                <p id="second-verb" class="verbs.answer"></p>
-                <p id="third-verb" class="verbs.answer"></p>
-                <p id="fourth-verb" class="verbs.answer"></p>
-                <button type="button" onclick="fn1()">Click Me!</button> 
-            </div>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+  <title>verbs</title>
+</head>
+
+<body>
+
+  <div class="area" >
+   
+    <ul class="circles">
+      <nav class="navbar navbar-dark bg-dark text-white">
+        <div class="container-fluid">
+          <div class="col-9">
+            <h3>verbs</h3>
+          </div>
+          <div class="col-3">
+            <p class="verbs-font-white" id="verbs-counter"></p>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <div class="text-center">
+        <!-- The PLAY ANIMATED sign -->
+        <div class="col-lg-2 container" id="next"></div>
+        <script>
+          var animation = bodymovin.loadAnimation({
+            container: document.getElementById('next'),
+            path:'./animation/play.json',
+            render: 'svg',
+            loop:true,
+            autplay: true,
+            name:'animation play'
+          })
+        </script>
+    
+      <!--   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-right-fill"
+          viewBox="0 0 16 16" id="next">
+          <path
+            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+        </svg> -->
+      </div>
+    
+      <h1 class="text-center" id="showVerb">Play to start</h1>
+      <div class="container text-center">
+        <div id="verbs-container">
+          <!-- The IMAGE shows here -->
+          <div id="showImage"></div>
+          <br />
+          <!-- Here we play de AUDIO -->
+          <audio id="showAudio"></audio>
+    
+          <!-- The Probably Answers -->
+          <p id="first-verb" class="verbs-answer"></p>
+          <p id="second-verb" class="verbs-answer"></p>
+          <p id="third-verb" class="verbs-answer"></p>
+          <p id="fourth-verb" class="verbs-answer"></p>
         </div>
         <small class="counter">
-            <span id="all_right_answers"></span>
-        </small>
+          <span id="all-right-answers"></span></small>
       </div>
-      
-    </div> -->
-  </body>
+      <div id="pruebas"></div>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
+  <!-- Bootstrap black bar -->
+
+  
+
+  <script src="verbs.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
 </html>

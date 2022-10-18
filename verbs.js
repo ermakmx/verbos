@@ -1,12 +1,70 @@
+// ***************************************************
+// VERBS
+// ***************************************************
 
-const verbs = ["buy", "shell"]
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
-  
-function fn1(){
-    let rnd = getRandomInt(0,1);
-    document.getElementById("first-verb").innerHTML = verbs[rnd];
-}
+const verbs = [
+'arrange',
+'sort',
+'grasp',
+'reach',
+'assume',
+'pretend',
+'burn',
+'scorch',
+'visual',
+'optic',
+'instinct',
+'aptitude',
+'law',
+'order',
+'excercise',
+'activity',
+'ideal',
+'optimal',
+'couple',
+'duo',
+'obese',
+'corpulent',
+'business',
+'commerce',
+'pressure',
+'stress',
+'kid',
+'child',
+'pursuit',
+'prosecution'
+];
+
+const verbos = [
+'organizar',
+'ordenar',
+'agarrar',
+'alcanzar',
+'asumir',
+'fingir',
+'quemar',
+'chamuscar',
+'visual',
+'óptico',
+'instinto',
+'aptitud',
+'ley',
+'orden',
+'ejercicio',
+'actividad',
+'ideal',
+'óptimo',
+'pareja',
+'dúo',
+'obesos',
+'corpulento',
+'negocio ',
+'comercio',
+'presión ',
+'estrés',
+'niño ',
+'hijos',
+'persecución',
+'fiscalía',
+
+];
