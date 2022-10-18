@@ -16,7 +16,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="./verbs.js"></script>
-
+   <!-- <script type="text/javascript" src="./script.js"></script> -->
+    <script type="text/javascript" src="./xcript.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -26,7 +27,27 @@
         <p class="col-3">algo</p>
       </div>
     </nav>
-    <div  id="next">
+    <form id="respuesta" action="./xcript.js"></form>
+    <div class="container" style="padding-top: 100px;">
+       <div class="row justify-content-md-center align-items-center">
+        <div class="btn-group-vertical  gap-3 col col-lg-6" role="group" aria-label="Vertical radio toggle button group">
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+          <label class="btn btn-outline-danger" for="vbtn-radio1">Verbo 1</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio2">Verbo 2</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio3">Verbo 3</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio4">Verbo 4</label>
+        </div>
+       </div>
+    </div>
+     </form>
+    <div style="text-align: center; padding-top: 50px;"><p>texto</p><br>
+      <button type="button" class="btn btn-primary" onclick="cambiar()">Verify </button>
+    </div>
+    <div type="submit" style="text-align: center; padding-top: 20px"><p>Puntuacion:  5 </p></div>
+    <!-- <div  id="next">
       <div class="containerCenter">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +85,6 @@
         </small>
       </div>
       
-    </div>
+    </div> -->
   </body>
 </html>

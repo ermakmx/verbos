@@ -5,7 +5,7 @@ const firstVerb = document.getElementById('firstVerb');
 const secondVerb = document.getElementById('secondVerb');
 const thirdVerb = document.getElementById('thidVerb');
 const fourthVerb = document.getElementById('fourthVerb');
-const next = document.getElementById('next'); 
+//const next = document.getElementById('next'); 
 const verbsCounter = document.getElementById('verbsCounter');
 const allRightCounter = document.getElementById('allRightCounter');
 const verbsContainer = document.getElementById('verbsContainer');
@@ -123,3 +123,5 @@ function ponerVerbo(){
     }
 
 }
+
+
